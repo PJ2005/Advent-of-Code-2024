@@ -178,10 +178,12 @@ export default function DayPage({ params }: { params: Promise<{ day: string }> }
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="w-full lg:w-1/2">
             <h2 className="text-xl font-semibold mb-4">Solution</h2>
-            <pre className="bg-white p-4 rounded-lg shadow h-[calc(100vh-200px)] overflow-auto">
-              {isSolutionLoading ? 'Loading...' : 
-               solution.trim() === '' ? 'The file is empty' : solution}
-            </pre>
+            <ScrollArea className="h-[calc(100vh-200px)]">
+              <pre className="bg-white p-4 rounded-lg shadow">
+                {isSolutionLoading ? 'Loading...' : 
+                 solution.trim() === '' ? 'The file is empty' : solution}
+              </pre>
+            </ScrollArea>
           </div>
           <div className="w-full lg:w-1/2 flex flex-col">
             <div className="mb-6">

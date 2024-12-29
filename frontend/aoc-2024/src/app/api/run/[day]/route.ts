@@ -59,9 +59,10 @@ export async function POST(
     const solutionPath = path.join(
       process.cwd(),
       '..',
+      '..',
       'backend',
       'codes',
-      day,
+      `day${day}`,
       'solution.py'
     )
     
