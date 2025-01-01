@@ -85,5 +85,16 @@ def part2() -> int:
     
     return score
 
-print(f'Part 1 answer is: {part1()}')
-print(f'Part 2 answer is: {part2()}')
+f = open('day1/output.txt', 'w')
+
+distance = part1()
+out1 = 'Part 1 answer is: ' + str(distance)
+f.write(out1)
+
+f.write('\n')
+
+score = part2()
+out2 = 'Part 2 answer is: ' + str(score)
+f.write(out2)
+
+f.close()
